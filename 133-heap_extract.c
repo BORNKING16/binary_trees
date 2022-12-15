@@ -1,6 +1,4 @@
 #include "binary_trees.h"
-#include <stdlib.h>
-
 
 #define INIT_NODE {0, NULL, NULL, NULL}
 
@@ -17,7 +15,7 @@
 		res = tmp->n; \
 		free(tmp); \
 		*root = NULL; \
-}
+	}
 
 #define SWAP_HEAD_BLOC { \
 		head = *root; \
@@ -131,7 +129,6 @@ heap_t *perc_down(heap_t *node)
 
 	if (!node)
 		return (NULL);
-
 	max = node->n;
 	if (node->left)
 		max = MAX(node->left->n, max);
@@ -163,7 +160,6 @@ int heap_extract(heap_t **root)
 
 	if (!root || !*root)
 		return (0);
-
 	SETUP_NODE_BLOC;
 	if (size == 1)
 	{
