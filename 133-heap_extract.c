@@ -1,4 +1,6 @@
 #include "binary_trees.h"
+#include <stdlib.h>
+
 
 #define INIT_NODE {0, NULL, NULL, NULL}
 
